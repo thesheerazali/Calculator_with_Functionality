@@ -5,10 +5,12 @@ class DigitalDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      // width: double.infinity,
-      color: Colors.black,
+    return Expanded(
+      child: Container(
+        height: 280,
+        // width: double.infinity,
+        color: Colors.black ,
+      ),
     );
   }
 }

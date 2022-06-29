@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 class CalculatorButtons extends StatelessWidget {
   const CalculatorButtons({
     Key? key,
-    this.text = '',
+  required  this.text,
     this.textcolor = 0,
     this.textsize = 0.0,
+    this.onPressed,
   }) : super(key: key);
 
   final String text;
   final int textcolor;
   final double textsize;
+  final Function()?  onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class CalculatorButtons extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.black, borderRadius: BorderRadius.circular(20)),
             child: MaterialButton(
-              onPressed: () {},
+              onPressed: onPressed,
               child: Text(
                 text,
                 style: TextStyle(

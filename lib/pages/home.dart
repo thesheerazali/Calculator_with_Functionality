@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
         height: 45,
         width: 100,
         decoration: BoxDecoration(
-          color: Colors.grey.shade600,
+          color: const Color.fromARGB(255, 26, 29, 36),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Padding(
