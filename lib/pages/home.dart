@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:my_calculator/components/digital_display.dart';
 
 import '../components/button_container.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.black,
         body: Column(
           children: [
-            SizedBox(
-              height: 24,
-            ),
-            _topIconContainer(),
             const SizedBox(
               height: 24,
             ),
-            const DigitalDisplay(),
-            const ButtonsContainer(),
+            _topIconContainer(),
+            Spacer(),
+
+            // const  DigitalDisplay(),
+            const DisplayWithButtonsContainer(),
           ],
         ),
       ),
@@ -34,7 +37,7 @@ class HomePage extends StatelessWidget {
         height: 45,
         width: 100,
         decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 26, 29, 36),
+          color: Colors.grey.shade600, //fromARGB(255, 26, 29, 36),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Padding(
