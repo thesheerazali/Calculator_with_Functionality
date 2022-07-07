@@ -44,11 +44,14 @@ class _ButtonsContainerState extends State<DisplayWithButtonsContainer> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      // mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 220, bottom: 50),
+        SizedBox(
+          height: 100,
           child: Text(
             displayValue,
+            textAlign: TextAlign.end,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 50,
@@ -105,9 +108,7 @@ class _ButtonsContainerState extends State<DisplayWithButtonsContainer> {
                       buttoncolor: Color(0xFFfea00c),
                       textcolor: Colors.white,
                       textsize: 25,
-                      onPressed: () {
-                       
-                      },
+                      onPressed: () {},
                     ),
                     CalculatorButtons(
                       text: '÷',

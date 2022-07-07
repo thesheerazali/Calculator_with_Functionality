@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
               height: 24,
             ),
             _topIconContainer(),
-            Spacer(),
+            const Spacer(),
 
             // const  DigitalDisplay(),
             const DisplayWithButtonsContainer(),
